@@ -14,7 +14,7 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-two`.
+- [x] Create a branch called `assignment-two`.
 - [ ] Ensure that the repository is public.
 - [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
 - [ ] Verify that the link is accessible in a private browser window.
@@ -57,6 +57,14 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+
+The first architecture (type 1) will overwrite old customer addresses with new ones. This is the preferred version of the architecture because this means that the most current address will be on file and the old ones will not be taking up space in the database. Accuracy is important here because we want to mail the books to the right place. If this was emailing addresses, we might reconsider keeping many on file as people may have many active accounts. In this system, users must edit their home addresses and when they are submitted to the database, the old row in the address column will be updated with the new address.
+
+The second architecture (type2) will maintain historical records of addresses. We will need to add a date component to these entries, so we know which one is most recent or active. While this takes up more space and increases the chance of choosing the wrong one, it may be helpful to have multiple addresses for someone who has multiple addresses (work, home, their son abroad) and this system would be able to handle this nuance. In this system, users may input many addresses, and the system will have additional columns dedicated to alternative addresses, keeping a regular label for year of input or main, side, work address labels.
+
+The first approach saves space, efficiency and ensures certainty and the second approach allows for nuance in having multiple addresses but takes up additional space and compute and increases the risk of error in mailing.
+
+
 ```
 
 ***
@@ -189,7 +197,13 @@ Read: Boykis, V. (2019, October 16). _Neural nets are just people all the way do
 
 Consider, for example, concepts of labour, bias, LLM proliferation, moderating content, intersection of technology and society, ect. 
 
-
 ```
 Your thoughts...
+
+The ethical issues important to this story involve labour exploitation and bias feedback loops.
+
+The labour exploitation side of this story is evident from the comparison made between fast-fashion factories and the content moderation of mechanical turk. Like the fast-fashion industry, the work of image tagging can only be done by humans and those doing this labour are paid pennies compared to the companies that are profiting off their work. Another similarity between these industries is that this work is disproportionately done by racialized workers in countries outside of North America to save money on labour costs. The 10$ per hour initially paid by Li to her grad students in the early 2000s is likely the most money anyone has been paid to tag images. The comparison of these industries is important because the human exploitation behind AI technology is even less evident than the fast-fashion industry despite their many similarities. The fast-fashion industry is largely considered unethical in its business practices, and we must also extend these ethical claims to the companies using mechanical turk and other sites like ScaleAI to outsource AI’s ability to understand images for enormous profit margins.
+
+The other major ethical concern surrounding this article is the possibility that once sufficient human feedback has been gathered by these companies, they may rely on algorithms to tag the images and perpetuate bias further than humans ever could. This ethical concern is raised to caution AI developers from taking humans out of curating training data sets since without the human meaning attributed to these images, they are of no use to humans at all. If humans are taken out of the loop, the LLMs could use their understanding of a hotdog or a human man and perpetuate this understanding without the volatility and malleability of human meaning making processes. 
+
 ```
