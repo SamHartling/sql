@@ -20,7 +20,7 @@ nulls, and 'unit' for the second column with nulls.
 The `||` values concatenate the columns into strings. 
 Edit the appropriate columns -- you're making two edits -- and the NULL rows will be fixed. 
 All the other rows will remain the same. */
---QUERY 1
+--QUERY 1  
 
 SELECT
 product_name || ', ' || coalesce(NULLIF(product_size, ' '), ' ')|| ' (' || 
